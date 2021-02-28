@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"mqtt_switch\startup_stm32f103xb.o"
+"mqtt_switch\main.o"
+"mqtt_switch\stm32f1xx_it.o"
+"mqtt_switch\stm32f1xx_hal_msp.o"
+"mqtt_switch\usart.o"
+"mqtt_switch\esp8266.o"
+"mqtt_switch\stm32f1xx_hal_gpio_ex.o"
+"mqtt_switch\stm32f1xx_hal_tim.o"
+"mqtt_switch\stm32f1xx_hal_tim_ex.o"
+"mqtt_switch\stm32f1xx_hal.o"
+"mqtt_switch\stm32f1xx_hal_rcc.o"
+"mqtt_switch\stm32f1xx_hal_rcc_ex.o"
+"mqtt_switch\stm32f1xx_hal_gpio.o"
+"mqtt_switch\stm32f1xx_hal_dma.o"
+"mqtt_switch\stm32f1xx_hal_cortex.o"
+"mqtt_switch\stm32f1xx_hal_pwr.o"
+"mqtt_switch\stm32f1xx_hal_flash.o"
+"mqtt_switch\stm32f1xx_hal_flash_ex.o"
+"mqtt_switch\stm32f1xx_hal_exti.o"
+"mqtt_switch\stm32f1xx_hal_uart.o"
+"mqtt_switch\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "MQTT_Switch\MQTT_Switch.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "MQTT_Switch.map" -o MQTT_Switch\MQTT_Switch.axf

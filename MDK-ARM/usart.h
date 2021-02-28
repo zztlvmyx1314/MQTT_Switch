@@ -3,9 +3,17 @@
 
 #include "main.h"
 
+#define RxBufSize 125
+
+extern uint8_t Rx_Buf[RxBufSize];
+
+
+
 
 
 void USART_Init();
+
+
 
 
 
