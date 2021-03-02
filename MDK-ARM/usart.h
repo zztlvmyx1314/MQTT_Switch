@@ -13,6 +13,7 @@ extern uint8_t Rx_Buf[RxBufSize];
 
 void USART_Init();
 
+void USART_DMA_Init();
 
 
 
