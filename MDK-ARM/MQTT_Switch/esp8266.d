@@ -29,6 +29,7 @@ mqtt_switch\esp8266.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 mqtt_switch\esp8266.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 mqtt_switch\esp8266.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 mqtt_switch\esp8266.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+mqtt_switch\esp8266.o: mqtt.h
 mqtt_switch\esp8266.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 mqtt_switch\esp8266.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 mqtt_switch\esp8266.o: usart.h

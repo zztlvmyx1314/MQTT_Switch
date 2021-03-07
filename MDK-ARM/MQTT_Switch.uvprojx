@@ -442,6 +442,16 @@
               <FileType>5</FileType>
               <FilePath>.\motor.h</FilePath>
             </File>
+            <File>
+              <FileName>mqtt.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\mqtt.h</FilePath>
+            </File>
+            <File>
+              <FileName>mqtt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mqtt.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

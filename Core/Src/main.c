@@ -66,7 +66,7 @@ static void MX_GPIO_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  ESP_Init();
+ 
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -82,22 +82,30 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 
+	USART_Init(USART_2);
   /* USER CODE BEGIN SysInit */
-
+   USART_DMA_Init();
+	
+	 ESP_Init();
+	
+	
   /* USER CODE END SysInit */
-
+  
   /* Initialize all configured peripherals */
   
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
-
+  
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
+     MQTT_Message(PING,2);
+		 HAL_Delay(15000);
+	 
+		 
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
