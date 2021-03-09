@@ -4,6 +4,25 @@
 #include "esp8266.h"
 #include "tim.h"
 
+//typedef struct MQTTDATA{
+
+
+//	uint8_t Ping;
+//	
+//	uint8_t PING[2];
+//	
+//	uint8_t MQTTCONN[120];
+//	
+
+//}MQTT_Data;
+
+
+//MQTT_Data MQTTMes;
+
+
+
+uint8_t Ping=0;
+
 uint8_t PING[2]={0xc0,0x00};
 uint8_t MQTTCONN[120]=
 {0x10,0x76,0x00,0x04,0x4d,0x51,0x54,0x54,0x04,0xc2,0x00,0x3c,0x00,0x27,0x31,0x32,
@@ -23,12 +42,15 @@ uint8_t MQTTSUB[44]={0x82,0x2a,0x00,0x01,0x00,0x25,0x2f,0x61,0x31,0x31,0x39,0x70
 
 void MQTT_Init(){
 
+	 Ping=0;  
+	
    MQTT_Mes(MQTTCONN,120);
 	
 	 MQTT_Mes(MQTTSUB,44);
       
-//   MQTTPING(5); // 15秒PING一次
-
+   MQTTPING(30); // 15秒PING一次
+   
+	 
 
 
 }
@@ -65,7 +87,7 @@ void MQTT_Mes(uint8_t* data,uint16_t len){
 			
 			 
 		 
-		 } while((count--)&&(!ESP_CheckBack(ack)));
+		 } while((--count)&&(!ESP_CheckBack(ack)));
 	
     count=4;
 		 ack="SEND OK";
@@ -84,7 +106,7 @@ void MQTT_Mes(uint8_t* data,uint16_t len){
 			
 			 
 		 
-		 } while((count--)&&(!ESP_CheckBack(ack)));
+		 } while((--count)&&(!ESP_CheckBack(ack)));
 
 }
 

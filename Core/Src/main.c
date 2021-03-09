@@ -21,6 +21,8 @@
 #include "main.h"
 #include "usart.h"
 #include "tim.h"
+#include "esp8266.h"
+#include "mqtt.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -80,17 +82,18 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
-
+	
+     USART_Init(USART_2);
   /* USER CODE BEGIN SysInit */
-//   USART_DMA_Init();
-//	
-//	 ESP_Init();
-//	 
-//	 MQTT_Init();
+   USART_DMA_Init();
+	
+	 ESP_Init();
+	 
+	 MQTT_Init();
  
-    USART_Init(USART_2);
+    
 		
-		TIM_Init(TIM_2,1);
+//		TIM_Init(TIM_2,15);
 
      
 		
@@ -113,7 +116,15 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    if(Ping!=0){
+		
+			  MQTT_Mes(PING,2);
+			
+			Ping=0;
+		
+		}
+		
+		
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -28,5 +28,6 @@ uint8_t ESP_CheckBack(char* ack);
 void ESP_SendCmd(char* cmd,char* ack,uint32_t wtime);
 void ESP_SendData(char* data);
 
+void IsDisConn();
 
 #endif

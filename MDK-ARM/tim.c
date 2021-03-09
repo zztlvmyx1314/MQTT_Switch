@@ -176,10 +176,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
      if(htim->Instance==TIM2){
 		 
+			  Ping=1;
 			 
 //			 MQTT_Mes(PING,2);
 			 
-			   HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"OK!",3,0xffff);
+//			   HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"OK!",3,0xffff);
 		 
 			 __HAL_TIM_CLEAR_FLAG(&TIM2_Handler,TIM_FLAG_UPDATE);
 		 

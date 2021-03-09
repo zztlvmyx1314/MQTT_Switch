@@ -28,16 +28,19 @@ void ESP_Init(){
     USART_Init(USART_1);
 
 //    ESP_SendCmd(AT_RST,OK,3000);
+	HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"AT测试:\r\n",(uint8_t)strlen("AT测试:\r\n"),0xffff);
 	  ESP_SendCmd(AT,OK,1000);
-	  ESP_SendCmd(AT_CWQAP,"WIFI DISCONNECT",1000);
+	  
+	HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"断开当前连接:\r\n",(uint8_t)strlen("断开当前连接:\r\n"),0xffff);
+	  ESP_SendCmd(AT_CWQAP,"OK",1000);
+	
+	HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"连接WIFI热点:\r\n",(uint8_t)strlen("连接WIFI热点:\r\n"),0xffff);
 	  ESP_SendCmd(AT_CWJAP,"WIFI CONNECTED",1500);
-	  ESP_SendCmd(ALY,"CONNECT",1000);
+	
+	HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"连接阿里云服务器:\r\n",(uint8_t)strlen("连接阿里云服务器:\r\n"),0xffff);
+	  ESP_SendCmd(ALY,"CONNECT",2000);
 //	  ESP_SendData("Hello!");
 	  
-	  
-	  
-
-
 
 
 
@@ -130,19 +133,48 @@ void ESP_SendData(char* data){
 uint8_t ESP_CheckBack(char* ack){
 
         
-	   if(strstr((char*)Rx_Temp,ack)!=NULL){
+//	   if(strstr((char*)Rx_Temp,ack)!=NULL){
+//		 
+//			 
+// 			 return Success;
+//		        
+//		 
+//		 }
+
+//		 else{
+//		 
+//		     return Failure; 
+//			 
+//		 }
+		 
+		 uint8_t count=4;
+		 
+		 while((--count)&&(strstr((char*)Rx_Temp,ack)==NULL));
+
+     if(count!=0){
 		 
 			 
- 			 return Success;
-		        
-		 
+			 return Success;
+			 
 		 }
-
+		 
 		 else{
 		 
-		     return Failure; 
+			 return Failure;
 			 
 		 }
+
+
+
+}
+
+void IsDisConn(){
+
+
+
+     
+
+
 
 
 

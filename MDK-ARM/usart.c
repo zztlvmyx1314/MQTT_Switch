@@ -210,6 +210,7 @@ void USART1_IRQHandler(void) // USART1中断服务函数
 		
 		 HAL_UART_Transmit(&UART2_Handler,Rx_Buf,RxCount,0xffff);
 		
+		
 		 memset(Rx_Buf,0,RxBufSize);
 		
 		 HAL_UART_Receive_DMA(&UART1_Handler,Rx_Buf,RxBufSize);  // 开启串口DMA接收
