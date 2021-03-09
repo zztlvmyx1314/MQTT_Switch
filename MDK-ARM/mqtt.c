@@ -27,7 +27,7 @@ void MQTT_Init(){
 	
 	 MQTT_Mes(MQTTSUB,44);
       
-   MQTTPING(5); // 15秒PING一次
+//   MQTTPING(5); // 15秒PING一次
 
 
 

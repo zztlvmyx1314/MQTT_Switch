@@ -11,7 +11,7 @@
 #define TIM_4 4
 
 
-extern TIM_HandleTypeDef TIM4_Handler;
+extern TIM_HandleTypeDef TIM3_Handler;
 extern TIM_HandleTypeDef TIM2_Handler;
 
 
