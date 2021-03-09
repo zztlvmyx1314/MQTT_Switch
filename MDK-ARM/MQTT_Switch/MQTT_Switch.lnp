@@ -7,6 +7,7 @@
 "mqtt_switch\esp8266.o"
 "mqtt_switch\motor.o"
 "mqtt_switch\mqtt.o"
+"mqtt_switch\tim.o"
 "mqtt_switch\stm32f1xx_hal_gpio_ex.o"
 "mqtt_switch\stm32f1xx_hal_tim.o"
 "mqtt_switch\stm32f1xx_hal_tim_ex.o"

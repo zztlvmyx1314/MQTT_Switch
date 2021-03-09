@@ -2,6 +2,7 @@
 #include "mqtt.h"
 #include "usart.h"
 #include "esp8266.h"
+#include "tim.h"
 
 uint8_t PING[2]={0xc0,0x00};
 uint8_t MQTTCONN[120]=
@@ -15,7 +16,34 @@ uint8_t MQTTCONN[120]=
 0x32,0x38,0x46,0x35,0x32,0x44,0x30,0x32
 };
 
-void MQTT_Message(uint8_t* data,uint16_t len){
+uint8_t MQTTSUB[44]={0x82,0x2a,0x00,0x01,0x00,0x25,0x2f,0x61,0x31,0x31,0x39,0x70,0x48,0x51,0x45,0x46,
+0x53,0x72,0x2f,0x4c,0x61,0x6d,0x70,0x5f,0x53,0x77,0x69,0x74,0x63,0x68,0x2f,0x75,
+0x73,0x65,0x72,0x2f,0x6f,0x6e,0x6f,0x72,0x6f,0x66,0x66,0x00};
+
+
+void MQTT_Init(){
+
+   MQTT_Mes(MQTTCONN,120);
+	
+	 MQTT_Mes(MQTTSUB,44);
+      
+   MQTTPING(5); // 15√ÎPING“ª¥Œ
+
+
+
+}
+
+void MQTTPING(uint16_t interval){
+
+     TIM_Init(TIM_2,interval);
+     
+
+
+
+}
+
+
+void MQTT_Mes(uint8_t* data,uint16_t len){
 
      uint16_t num=120;
 	
@@ -30,16 +58,17 @@ void MQTT_Message(uint8_t* data,uint16_t len){
 	
 	    HAL_Delay(500);
 			 
-			if(ESP_CheckBack(ack)==Success){
-			
-				break;
-			}
+//			if(ESP_CheckBack(ack)==Success){
+//			
+//				break;
+//			}
 			
 			 
 		 
-		 } while(count--);
+		 } while((count--)&&(!ESP_CheckBack(ack)));
 	
     count=4;
+		 ack="SEND OK";
 		 
 		 do {
 		 
@@ -48,14 +77,14 @@ void MQTT_Message(uint8_t* data,uint16_t len){
 	
 	    HAL_Delay(500);
 			 
-			if(ESP_CheckBack("SEND OK")==Success){
-			
-				return;
-			}
+//			if(ESP_CheckBack(ack)==Success){
+//			
+//				return;
+//			}
 			
 			 
 		 
-		 } while(count--);
+		 } while((count--)&&(!ESP_CheckBack(ack)));
 
 }
 

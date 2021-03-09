@@ -27,13 +27,13 @@ void ESP_Init(){
    
     USART_Init(USART_1);
 
-//    ESP_SendCmd(AT_RST,OK,1000);
+//    ESP_SendCmd(AT_RST,OK,3000);
 	  ESP_SendCmd(AT,OK,1000);
 	  ESP_SendCmd(AT_CWQAP,"WIFI DISCONNECT",1000);
-	  ESP_SendCmd(AT_CWJAP,OK,1000);
+	  ESP_SendCmd(AT_CWJAP,"WIFI CONNECTED",1500);
 	  ESP_SendCmd(ALY,"CONNECT",1000);
 //	  ESP_SendData("Hello!");
-	  MQTT_Message(MQTTCONN,120);
+	  
 	  
 	  
 
@@ -61,16 +61,16 @@ void ESP_SendCmd(char* cmd,char* ack,uint32_t wtime){
 	
 	   HAL_Delay(wtime);
 			 
-			if(ESP_CheckBack(ack)==Success){
-			
-				memset(Rx_Temp,0,RxBufSize);
-				
-				return;
-			}
+//			if(ESP_CheckBack(ack)==Success){
+//			
+//				memset(Rx_Temp,0,RxBufSize);
+//				
+//				return;
+//			}
 			
 			 
 		 
-		 } while(count--);
+		 } while((count--)&&(!ESP_CheckBack(ack)));
 	
 	  
      memset(Rx_Temp,0,RxBufSize);
@@ -93,16 +93,18 @@ void ESP_SendData(char* data){
 	
 	    HAL_Delay(500);
 			 
-			if(ESP_CheckBack(ack)==Success){
-			
-				break;
-			}
+//			if(ESP_CheckBack(ack)==Success){
+//			
+//				break;
+//			}
 			
 			 
 		 
-		 } while(count--);
+		 } while((count--)&&(!ESP_CheckBack(ack)));
 	
     count=4;
+		 
+		 ack="SEND OK";
 		 
 		 do {
 		 
@@ -111,14 +113,14 @@ void ESP_SendData(char* data){
 	
 	    HAL_Delay(500);
 			 
-			if(ESP_CheckBack("SEND OK")==Success){
-			
-				return;
-			}
+//			if(ESP_CheckBack("SEND OK")==Success){
+//			
+//				return;
+//			}
 			
 			 
 		 
-		 } while(count--);
+		 } while((count--)&&(!ESP_CheckBack(ack)));
 
 
 

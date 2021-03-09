@@ -7,9 +7,13 @@ extern uint8_t PING[2];
 extern uint8_t MQTTCONN[120];
 
 
-void MQTT_Message(uint8_t* data,uint16_t len);
+void MQTT_Mes(uint8_t* data,uint16_t len);
 
 uint16_t MesLen(uint8_t mes[]);
+
+void MQTT_Init();
+
+void MQTTPING(uint16_t interval);
 
 
 #endif

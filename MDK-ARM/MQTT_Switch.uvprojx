@@ -452,6 +452,16 @@
               <FileType>1</FileType>
               <FilePath>.\mqtt.c</FilePath>
             </File>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tim.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

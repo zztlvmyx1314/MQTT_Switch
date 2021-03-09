@@ -21,6 +21,8 @@
 #include "main.h"
 #include "usart.h"
 #include "esp8266.h"
+#include "mqtt.h"
+#include "tim.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -81,29 +83,34 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
+	
+	
 
 	USART_Init(USART_2);
   /* USER CODE BEGIN SysInit */
    USART_DMA_Init();
 	
 	 ESP_Init();
-	
+	 
+	 MQTT_Init();
 	
   /* USER CODE END SysInit */
   
   /* Initialize all configured peripherals */
   
   /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
   
+  /* USER CODE END 2 */
+  HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"Ready!",6,0xffff);
+	
+	HAL_Delay(1000);
+	MQTT_Mes(PING,2);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-     MQTT_Message(PING,2);
-		 HAL_Delay(15000);
+    
 	 
 		 
     /* USER CODE BEGIN 3 */
