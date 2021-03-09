@@ -17,7 +17,7 @@ void TIM_Init(uint8_t TIMx,uint16_t detim){
 
 		TIM2_Handler.Init.CounterMode=TIM_COUNTERMODE_UP; //向上计数器
 
-		TIM2_Handler.Init.Period=(detim*2)-1; //自动装载值
+		TIM2_Handler.Init.Period=(detim*200)-1; //自动装载值
 
 		TIM2_Handler.Init.ClockDivision=TIM_CLOCKDIVISION_DIV1; //时钟分频因子
 		
@@ -177,7 +177,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
      if(htim->Instance==TIM2){
 		 
 			 
-			 MQTT_Mes(PING,2);
+//			 MQTT_Mes(PING,2);
+			 
+			   HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"OK!",3,0xffff);
 		 
 			 __HAL_TIM_CLEAR_FLAG(&TIM2_Handler,TIM_FLAG_UPDATE);
 		 

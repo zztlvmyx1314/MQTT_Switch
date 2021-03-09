@@ -90,15 +90,20 @@ int main(void)
  
     USART_Init(USART_2);
 		
-//		TIM_Init(TIM_2,1);
+		TIM_Init(TIM_2,1);
+
+     
+		
+	 
+
+
 		
 		HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"Ready!",6,0xffff);
     
 	
   /* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
+
   /* USER CODE BEGIN 2 */
   
   /* USER CODE END 2 */

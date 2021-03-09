@@ -4,6 +4,7 @@
 
 #include "main.h"
 #include "mqtt.h"
+#include "usart.h"
 
 #define TIM_1 1
 #define TIM_2 2

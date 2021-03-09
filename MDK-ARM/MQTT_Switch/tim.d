@@ -30,3 +30,6 @@ mqtt_switch\tim.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 mqtt_switch\tim.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 mqtt_switch\tim.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 mqtt_switch\tim.o: mqtt.h
+mqtt_switch\tim.o: usart.h
+mqtt_switch\tim.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+mqtt_switch\tim.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
