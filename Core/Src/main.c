@@ -83,25 +83,21 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 	
-     USART_Init(USART_2);
-  /* USER CODE BEGIN SysInit */
-   USART_DMA_Init();
-	
-	 ESP_Init();
-	 
-	 MQTT_Init();
- 
+//   USART_Init(USART_2);
+
+//   USART_DMA_Init();
+//	
+//	 ESP_Init();
+//	 
+//	 MQTT_Init();
+
     
+		TIM_PWM_Init(0);
 		
-//		TIM_Init(TIM_2,15);
-
-     
 		
-	 
+	
+	
 
-
-		
-		HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"Ready!",6,0xffff);
     
 	
   /* USER CODE END SysInit */
@@ -115,14 +111,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-    if(Ping!=0){
-		
-			  MQTT_Mes(PING,2);
-			
-			Ping=0;
-		
-		}
+ 
 		
 		
     /* USER CODE BEGIN 3 */

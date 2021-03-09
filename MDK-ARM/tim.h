@@ -18,5 +18,8 @@ extern TIM_HandleTypeDef TIM2_Handler;
 
 void TIM_Init(uint8_t TIMx,uint16_t detim);
 
+void TIM_PWM_Init(uint8_t angle);
+
+uint32_t PWM_SetAng(uint32_t angle);
 
 #endif
