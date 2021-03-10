@@ -116,13 +116,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    if(Ping!=0){
-		
-			  MQTT_Mes(PING,2);
-			
-			Ping=0;
-		
-		}
+   
 		
 		
     /* USER CODE BEGIN 3 */
