@@ -23,6 +23,7 @@
 #include "tim.h"
 #include "esp8266.h"
 #include "mqtt.h"
+#include "motor.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -83,26 +84,28 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 	
-     USART_Init(USART_2);
-  /* USER CODE BEGIN SysInit */
-   USART_DMA_Init();
+//   USART_Init(USART_2);
+
+//   USART_DMA_Init();
+//	
+//	 ESP_Init();
+//	 
+//	 MQTT_Init();
+
+//  USART_Init(USART_1);
 	
-	 ESP_Init();
-	 
-	 MQTT_Init();
- 
-    
-		
-//		TIM_Init(TIM_2,15);
+	USART_DMA_Init();
 
-     
+    printf("Ready!");
 		
-	 
+//		TIM_PWM_Init(180);
+	
+	   Motor_Init();
+	
 
-
-		
-		HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"Ready!",6,0xffff);
-    
+     HAL_Delay(500);
+		 
+		 Motor_SetAngle(90);
 	
   /* USER CODE END SysInit */
 
@@ -115,8 +118,14 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+<<<<<<< HEAD
     /* USER CODE END WHILE */
    
+=======
+    
+	
+		
+>>>>>>> test.1.motor
 		
 		
     /* USER CODE BEGIN 3 */

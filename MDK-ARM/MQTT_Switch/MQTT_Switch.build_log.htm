@@ -27,7 +27,63 @@ Project File Date:  03/09/2021
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'MQTT_Switch'
-"MQTT_Switch\MQTT_Switch.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\MDK-ARM\usart.h(28): warning:  #1295-D: Deprecated declaration USART_DMA_Init - give arg types
+  void USART_DMA_Init();
+..\MDK-ARM\mqtt.h(14): warning:  #1295-D: Deprecated declaration MQTT_Init - give arg types
+  void MQTT_Init();
+..\MDK-ARM\mqtt.h(21): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\MDK-ARM\tim.h(22): warning:  #1295-D: Deprecated declaration TIM_PWM_Init - give arg types
+  void TIM_PWM_Init();
+..\MDK-ARM\tim.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\MDK-ARM\esp8266.h(24): warning:  #1295-D: Deprecated declaration ESP_Init - give arg types
+  void ESP_Init();
+..\MDK-ARM\esp8266.h(31): warning:  #1295-D: Deprecated declaration IsDisConn - give arg types
+  void IsDisConn();
+..\MDK-ARM\motor.h(11): warning:  #1295-D: Deprecated declaration Motor_Init - give arg types
+  void Motor_Init();
+../Core/Src/main.c(121): error:  #29: expected an expression
+  <<<<<<< HEAD
+../Core/Src/main.c(132): warning:  #12-D: parsing restarts here after previous syntax error
+    }
+../Core/Src/main.c(132): error:  #65: expected a ";"
+    }
+../Core/Src/main.c(176): warning:  #177-D: function "MX_GPIO_Init"  was declared but never referenced
+  static void MX_GPIO_Init(void)
+../Core/Src/main.c: 10 warnings, 2 errors
+compiling mqtt.c...
+mqtt.h(14): warning:  #1295-D: Deprecated declaration MQTT_Init - give arg types
+  void MQTT_Init();
+mqtt.h(21): warning:  #1-D: last line of file ends without a newline
+  #endif
+usart.h(28): warning:  #1295-D: Deprecated declaration USART_DMA_Init - give arg types
+  void USART_DMA_Init();
+esp8266.h(24): warning:  #1295-D: Deprecated declaration ESP_Init - give arg types
+  void ESP_Init();
+esp8266.h(31): warning:  #1295-D: Deprecated declaration IsDisConn - give arg types
+  void IsDisConn();
+tim.h(22): warning:  #1295-D: Deprecated declaration TIM_PWM_Init - give arg types
+  void TIM_PWM_Init();
+tim.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif
+mqtt.c: 7 warnings, 0 errors
+compiling motor.c...
+mqtt.h(14): warning:  #1295-D: Deprecated declaration MQTT_Init - give arg types
+  void MQTT_Init();
+mqtt.h(21): warning:  #1-D: last line of file ends without a newline
+  #endif
+usart.h(28): warning:  #1295-D: Deprecated declaration USART_DMA_Init - give arg types
+  void USART_DMA_Init();
+tim.h(22): warning:  #1295-D: Deprecated declaration TIM_PWM_Init - give arg types
+  void TIM_PWM_Init();
+tim.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif
+motor.h(11): warning:  #1295-D: Deprecated declaration Motor_Init - give arg types
+  void Motor_Init();
+motor.c: 6 warnings, 0 errors
+"MQTT_Switch\MQTT_Switch.axf" - 2 Error(s), 23 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -50,7 +106,8 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:01
+Target not created.
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>
