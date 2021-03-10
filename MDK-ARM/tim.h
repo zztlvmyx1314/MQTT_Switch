@@ -14,12 +14,13 @@
 
 extern TIM_HandleTypeDef TIM3_Handler;
 extern TIM_HandleTypeDef TIM2_Handler;
+extern TIM_OC_InitTypeDef TIM3_CH1Handler;
 
 
 void TIM_Init(uint8_t TIMx,uint16_t detim);
 
-void TIM_PWM_Init(uint8_t angle);
+void TIM_PWM_Init();
 
-uint32_t PWM_SetAng(uint32_t angle);
+uint32_t PWM_SetPuls(uint32_t angle);
 
 #endif

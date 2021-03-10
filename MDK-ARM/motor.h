@@ -3,11 +3,13 @@
 #define _MOTOR_H_
 
 #include "main.h"
+#include "tim.h"
 
 
 
-//void TIM_Init(uint8_t arr);
+void Motor_Init();
 
+void Motor_SetAngle(uint8_t angle);
 
 
 

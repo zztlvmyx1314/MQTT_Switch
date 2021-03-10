@@ -3,6 +3,7 @@
 
 TIM_HandleTypeDef TIM2_Handler;
 TIM_HandleTypeDef TIM3_Handler;
+TIM_OC_InitTypeDef TIM3_CH1Handler;
 
 void TIM_Init(uint8_t TIMx,uint16_t detim){
 
@@ -96,7 +97,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim){
 
 
 
-void TIM_PWM_Init(uint8_t angle){
+void TIM_PWM_Init(){
 
 /*************************定时器TIM2配置******************/
 	
@@ -122,11 +123,11 @@ void TIM_PWM_Init(uint8_t angle){
 	   
 		  
 		 
-		TIM_OC_InitTypeDef TIM3_CH1Handler; //定时器 1 通道 1 句柄 
+	 //定时器 1 通道 1 句柄 
 
 		TIM3_CH1Handler.OCMode=TIM_OCMODE_PWM1; //模式选择 PWM1
 
-		TIM3_CH1Handler.Pulse=PWM_SetAng(angle); //设置比较值,此值用来确定占空比,默认比较值为自动重装载值的一半,即占空比为 50%
+		TIM3_CH1Handler.Pulse=0.5/20.0*80; //设置比较值,此值用来确定占空比,默认比较值为自动重装载值的一半,即占空比为 50%
 
 		TIM3_CH1Handler.OCPolarity=TIM_OCPOLARITY_HIGH; //输出比较极性为低
 
@@ -145,7 +146,7 @@ void TIM_PWM_Init(uint8_t angle){
 }
 
 
-uint32_t PWM_SetAng(uint32_t angle){
+uint32_t PWM_SetPuls(uint32_t angle){
 
 	
 	      uint32_t copval=0;

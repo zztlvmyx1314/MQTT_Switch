@@ -34,3 +34,4 @@ mqtt_switch\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 mqtt_switch\main.o: ..\MDK-ARM\tim.h
 mqtt_switch\main.o: ..\MDK-ARM\mqtt.h
 mqtt_switch\main.o: ..\MDK-ARM\esp8266.h
+mqtt_switch\main.o: ..\MDK-ARM\motor.h

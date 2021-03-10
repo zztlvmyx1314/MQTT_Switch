@@ -23,6 +23,7 @@
 #include "tim.h"
 #include "esp8266.h"
 #include "mqtt.h"
+#include "motor.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -91,14 +92,20 @@ int main(void)
 //	 
 //	 MQTT_Init();
 
-    
-		TIM_PWM_Init(0);
-		
-		
+//  USART_Init(USART_1);
 	
+	USART_DMA_Init();
+
+    printf("Ready!");
+		
+//		TIM_PWM_Init(180);
+	
+	   Motor_Init();
 	
 
-    
+     HAL_Delay(500);
+		 
+		 Motor_SetAngle(90);
 	
   /* USER CODE END SysInit */
 
@@ -111,7 +118,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
- 
+    
+	
+		
 		
 		
     /* USER CODE BEGIN 3 */
