@@ -103,9 +103,17 @@ int main(void)
 	   Motor_Init();
 	
 
-     HAL_Delay(500);
+     
 		 
-		 Motor_SetAngle(90);
+		 Motor_SetAngle(Motor_2,0);
+		 Motor_SetAngle(Motor_1,0);
+		 
+		 HAL_Delay(500);
+		 
+		 Motor_SetAngle(Motor_2,180);
+		 Motor_SetAngle(Motor_1,180);
+		
+		 
 	
   /* USER CODE END SysInit */
 
@@ -113,19 +121,14 @@ int main(void)
   /* USER CODE BEGIN 2 */
   
   /* USER CODE END 2 */
+	
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-<<<<<<< HEAD
-    /* USER CODE END WHILE */
-   
-=======
-    
-	
+     
 		
->>>>>>> test.1.motor
 		
 		
     /* USER CODE BEGIN 3 */

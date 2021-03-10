@@ -3,7 +3,7 @@
 
 TIM_HandleTypeDef TIM2_Handler;
 TIM_HandleTypeDef TIM3_Handler;
-TIM_OC_InitTypeDef TIM3_CH1Handler;
+TIM_OC_InitTypeDef TIM3_CH12Handler;
 
 void TIM_Init(uint8_t TIMx,uint16_t detim){
 
@@ -125,18 +125,18 @@ void TIM_PWM_Init(){
 		 
 	 //定时器 1 通道 1 句柄 
 
-		TIM3_CH1Handler.OCMode=TIM_OCMODE_PWM1; //模式选择 PWM1
+		TIM3_CH12Handler.OCMode=TIM_OCMODE_PWM1; //模式选择 PWM1
 
-		TIM3_CH1Handler.Pulse=0.5/20.0*80; //设置比较值,此值用来确定占空比,默认比较值为自动重装载值的一半,即占空比为 50%
+		TIM3_CH12Handler.Pulse=0.0/20.0*80; //设置比较值,此值用来确定占空比,默认比较值为自动重装载值的一半,即占空比为 50%
 
-		TIM3_CH1Handler.OCPolarity=TIM_OCPOLARITY_HIGH; //输出比较极性为低
+		TIM3_CH12Handler.OCPolarity=TIM_OCPOLARITY_HIGH; //输出比较极性为低
 
-    TIM3_CH1Handler.OCFastMode=TIM_OCFAST_DISABLE;
+    TIM3_CH12Handler.OCFastMode=TIM_OCFAST_DISABLE;
 
-		HAL_TIM_PWM_ConfigChannel(&TIM3_Handler,&TIM3_CH1Handler,TIM_CHANNEL_1);//配置 TIM1 通道 1
+		HAL_TIM_PWM_ConfigChannel(&TIM3_Handler,&TIM3_CH12Handler,TIM_CHANNEL_1|TIM_CHANNEL_2);//配置 TIM1 通道 1
 
    
-   HAL_TIM_PWM_Start(&TIM3_Handler,TIM_CHANNEL_1);   // 使能 TIMx
+    HAL_TIM_PWM_Start(&TIM3_Handler,TIM_CHANNEL_1|TIM_CHANNEL_2);   // 使能 TIMx
  
 //   TIM_CCxChannelCmd(TIM3,TIM_CHANNEL_1,1); // 单独使能定时器的输出通道函数
 
@@ -152,43 +152,7 @@ uint32_t PWM_SetPuls(uint32_t angle){
 	      uint32_t copval=0;
 	     
 	     copval=((0.5/45.0*angle+0.5)/20.0)*80;
-	        
-	
 
-//    switch(copval){
-//		 
-//			 case 0:
-
-//			 copval=0.5/20.0*80;
-// 
-//       break;       
-//			 
-//			 case 45:
-
-//			 copval=1.0/20.0*80;
-// 
-//       break; 
-//		 
-//			 
-//			 case 90:
-
-//			 copval=1.5/20.0*80;
-// 
-//       break;
-
-//       case 135:
-
-//			 copval=2.0/20.0*80;
-// 
-//       break; 			 
-//		 
-//			 case 180:
-
-//			 copval=2.5/20.0*80;
-// 
-//       break; 
-//			 
-//		 }
 
    
    return copval;
@@ -216,7 +180,7 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef* huart){
 						 
 			 GPIO_InitTypeDef GPIO_Struct;  // GPIO结构体
 			 
-			 GPIO_Struct.Pin=GPIO_PIN_6;  //PA0
+			 GPIO_Struct.Pin=GPIO_PIN_6|GPIO_PIN_7;  //PA0
 			 GPIO_Struct.Mode=GPIO_MODE_AF_PP; //复用推挽输出
 			 GPIO_Struct.Pull=GPIO_PULLUP;  //上拉
 			 GPIO_Struct.Speed=GPIO_SPEED_FREQ_HIGH; //高速

@@ -14,7 +14,7 @@
 
 extern TIM_HandleTypeDef TIM3_Handler;
 extern TIM_HandleTypeDef TIM2_Handler;
-extern TIM_OC_InitTypeDef TIM3_CH1Handler;
+extern TIM_OC_InitTypeDef TIM3_CH12Handler;
 
 
 void TIM_Init(uint8_t TIMx,uint16_t detim);
