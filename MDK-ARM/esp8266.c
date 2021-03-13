@@ -5,27 +5,33 @@
 #include "usart.h"
 
 
+
 uint8_t sendcount=4;
-uint8_t TCP=0;
+
+uint8_t IsDetect=0;
 
 char *AT="AT\r\n";
 char *AT_RST="AT+RST\r\n";
 char *AT_CWMODE="AT+CWMODE=1\r\n";
-char *AT_CWJAP="AT+CWJAP=\"myxlvzzt\",\"12345678\"\r\n";
-char *AT_CWJAP_PC="AT+CWJAP=\"ZhouZhengtao\",\"myx20010828\"\r\n";
+char *AT_CWJAP="AT+CWJAP=\"314\",\"11111111\"\r\n";
+char *AT_CWJAP_PC="AT+CWJAP=\"314\",\"11111111\"\r\n";
 char *AT_CIPMUX="AT+CIPMUX=0\r\n";
 char *AT_CIPSTART="AT+CIPSTART=\"TCP\",\"192.168.43.1\",8080\r\n";
-char *ALY="AT+CIPSTART=\"TCP\",\"a119pHQEFSr.iot-as-mqtt.cn-shanghai.aliyuncs.com\",1883\r\n";
+char *ALY="AT+CIPSTART=\"TCP\",\"101.133.196.120\",1883\r\n";
 char *AT_CWQAP="AT+CWQAP\r\n";
 char *OK="OK";
 
+char *DISCONN="link is not valid";
+char *CLOSED="CLOSED";
+
+char *AT_CIPSTATUS="AT+CIPSTATUS\r\n";
 
 
 
 void ESP_Init(){
 
    
-    USART_Init(USART_1);
+//    USART_Init(USART_1);
 
 //    ESP_SendCmd(AT_RST,OK,3000);
 	HAL_UART_Transmit(&UART2_Handler,(uint8_t*)"AT≤‚ ‘:\r\n",(uint8_t)strlen("AT≤‚ ‘:\r\n"),0xffff);
@@ -42,7 +48,7 @@ void ESP_Init(){
 //	  ESP_SendData("Hello!");
 	  
 
-
+    
 
 
 
@@ -76,7 +82,7 @@ void ESP_SendCmd(char* cmd,char* ack,uint32_t wtime){
 		 } while((count--)&&(!ESP_CheckBack(ack)));
 	
 	  
-     memset(Rx_Temp,0,RxBufSize);
+//     memset(Rx_Temp,0,RxBufSize);
 
 
 }
@@ -149,7 +155,7 @@ uint8_t ESP_CheckBack(char* ack){
 		 
 		 uint8_t count=4;
 		 
-		 while((--count)&&(strstr((char*)Rx_Temp,ack)==NULL));
+		 while((--count)&&(strstr((char*)Rx_Temp,ack)==NULL)){}
 
      if(count!=0){
 		 
@@ -164,20 +170,83 @@ uint8_t ESP_CheckBack(char* ack){
 			 
 		 }
 
+}
+
+
+
+
+void ESP_Detector(){
+
+	    IsDisConn();
+
+     if(IsDetect){
+		 
+       uint8_t count=2;
+
+       memset(Rx_Temp,0,RxBufSize);			 
+			do{ 
+		   printf("%s",AT_CIPSTATUS);
+			 
+			 HAL_Delay(500);
+			 
+			}while((--count)&&(ESP_CheckBack("STATUS:4")!=NULL));
+			 
+			 
+			 memset(Rx_Temp,0,RxBufSize);	
+			
+			if(!count){
+			
+				 ESP_SendCmd(AT_CIPSTART,"CONNECT",1000);
+				 
+			
+			}
+			
+		 
+			IsDetect=0;
+			
+			__HAL_TIM_ENABLE(&TIM4_Handler);
+			
+			
+		 
+		 }
+
+
+
+
 
 
 }
 
+
 void IsDisConn(){
 
+	   uint8_t f=1;
 
+    if((strstr((char*)Rx_Temp,CLOSED)!=NULL)||(strstr((char*)Rx_Temp,DISCONN)!=NULL)){
+		
+		
+		   	  f=0;
+			
+		
+		}
+      
 
-     
+		if(f!=1){
 
+			 
+     ESP_SendCmd(ALY,"CONNECT",1500);
+			
+		 	if(strstr((char*)Rx_Temp,"CONNECT")!=NULL){
+			
+		 MQTT_Mes(MQTTCONN,CONNACK);
+			
+			}
+			 
+    
 
-
-
-
-
+		}
+		
+		
+		
 
 }

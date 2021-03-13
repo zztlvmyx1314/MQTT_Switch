@@ -1,5 +1,6 @@
 
 #include "usart.h"
+#include "mqtt.h"
 
 GPIO_InitTypeDef GPIO_Struct;
 UART_HandleTypeDef UART1_Handler;
@@ -181,6 +182,25 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart){
 }
 
 
+void USART_IsEnable(uint8_t flag){
+
+     if(flag){
+		 
+			 __HAL_UART_ENABLE(&UART1_Handler);
+		 
+		 }
+		 
+		 else {
+		 
+		 __HAL_UART_DISABLE(&UART1_Handler);
+		 
+		 }
+
+
+
+}
+
+
 
 void USART1_IRQHandler(void) // USART1中断服务函数
 {
@@ -203,15 +223,22 @@ void USART1_IRQHandler(void) // USART1中断服务函数
 	  
 		 HAL_UART_DMAStop(&UART1_Handler); 
 		
-
+		  __HAL_UART_DISABLE(&UART1_Handler);
+		
+		
 		 uint16_t RxCount=RxBufSize-__HAL_DMA_GET_COUNTER(&UARTRxDMA_Handler);
 
 		 memcpy(Rx_Temp,Rx_Buf,RxCount);
+		 
+		strstr((char*)Rx_Buf,"+IPD")!=NULL ? memmove(MQTT_Buf,Rx_Buf,RxCount): memset(MQTT_Buf,0,RxBufSize);
+		 
 		
 		 HAL_UART_Transmit(&UART2_Handler,Rx_Buf,RxCount,0xffff);
 		
 		
 		 memset(Rx_Buf,0,RxBufSize);
+		
+		__HAL_UART_ENABLE(&UART1_Handler);
 		
 		 HAL_UART_Receive_DMA(&UART1_Handler,Rx_Buf,RxBufSize);  // 开启串口DMA接收
 		

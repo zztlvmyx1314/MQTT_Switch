@@ -4,6 +4,7 @@
 
 #include "main.h"
 #include "mqtt.h"
+#include "tim.h"
 
 #define Success 1
 #define Failure 0
@@ -18,8 +19,9 @@
 
 extern UART_HandleTypeDef UART1_Handler;
 
-extern char *AT_CIPSTART;
-extern uint8_t TCP;
+//extern char *AT_CIPSTART;
+
+extern uint8_t IsDetect;
 
 void ESP_Init();
 
@@ -29,5 +31,7 @@ void ESP_SendCmd(char* cmd,char* ack,uint32_t wtime);
 void ESP_SendData(char* data);
 
 void IsDisConn();
+
+void ESP_Detector();
 
 #endif

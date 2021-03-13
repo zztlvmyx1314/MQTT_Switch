@@ -5,11 +5,14 @@
 #include "stdio.h"
 #include "string.h"
 
+
 #define USART_1 1
 #define USART_2 2
 #define USART_3 3
 
 #define RxBufSize 255
+#define ON 1
+#define OFF 0
 
 extern UART_HandleTypeDef UART1_Handler;
 extern DMA_HandleTypeDef UARTRxDMA_Handler;
@@ -27,7 +30,7 @@ void USART_Init(uint8_t USARTx);
 
 void USART_DMA_Init();
 
-
+void USART_IsEnable(uint8_t flag);
 
 
 

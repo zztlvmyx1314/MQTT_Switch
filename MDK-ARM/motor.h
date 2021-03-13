@@ -15,7 +15,7 @@ void Motor_Init();
 void Motor_SetAngle(uint8_t motorx,uint8_t angle);
 
 
-
+void Motor_Rotate(uint8_t motorx,uint8_t angle);
 
 
 

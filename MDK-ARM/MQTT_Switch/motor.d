@@ -34,3 +34,6 @@ mqtt_switch\motor.o: mqtt.h
 mqtt_switch\motor.o: usart.h
 mqtt_switch\motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 mqtt_switch\motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+mqtt_switch\motor.o: motor.h
+mqtt_switch\motor.o: esp8266.h
+mqtt_switch\motor.o: tim.h

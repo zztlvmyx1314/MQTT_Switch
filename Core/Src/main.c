@@ -84,56 +84,99 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 	
-//   USART_Init(USART_2);
+   USART_Init(USART_2);
 
-//   USART_DMA_Init();
-//	
-//	 ESP_Init();
-//	 
-//	 MQTT_Init();
-
-//  USART_Init(USART_1);
+   USART_DMA_Init();
 	
-	USART_DMA_Init();
-
-    printf("Ready!");
-		
-//		TIM_PWM_Init(180);
+	 ESP_Init();
+	 
+	 MQTT_Init();
+	 
+	 
 	
-	   Motor_Init();
-	
+	 Motor_Init();
 
-     
-		 
-		 Motor_SetAngle(Motor_2,0);
+    printf("*************Ready!*************\n");
+
+
+	   Motor_SetAngle(Motor_2,0);
 		 Motor_SetAngle(Motor_1,0);
-		 
+	  
+		  
 		 HAL_Delay(500);
 		 
 		 Motor_SetAngle(Motor_2,180);
 		 Motor_SetAngle(Motor_1,180);
+
+	
+	
+      
 		
-		 
+		 TIM_Init(TIM_4,5);
+//		
+		__HAL_TIM_ENABLE(&TIM2_Handler);
+		__HAL_TIM_ENABLE(&TIM4_Handler);
+	
 	
   /* USER CODE END SysInit */
 
-
+ printf("*************OK!*************");
   /* USER CODE BEGIN 2 */
   
   /* USER CODE END 2 */
-	
 
+	uint8_t flag=0;
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-     
+    
+		
+		
+		MQTT_SPing();
+		
+		ESP_Detector();
+		
+		flag=MQTT_DataDeal();
+		
+		switch(flag){
+		
+		  case 0x11:
+				flag=0;
+			 Motor_Rotate(Motor_1,0);
+			 Motor_Rotate(Motor_1,90);
+			 
+			break;
+		
+		case 0x10:
+				flag=0;
+			 Motor_Rotate(Motor_1,180);
+			 Motor_Rotate(Motor_1,90);
+			 
+			break;
+		
+		case 0x21:
+				flag=0;
+			 Motor_Rotate(Motor_2,180);
+			 Motor_Rotate(Motor_2,90);
+			 
+			break;
+		
+		case 0x20:
+				flag=0;
+			 Motor_Rotate(Motor_2,0);
+			 Motor_Rotate(Motor_2,90);
+			 
+			break;
+		
+		
+		}
 		
 		
 		
-    /* USER CODE BEGIN 3 */
-  }
   /* USER CODE END 3 */
+}
+	
 }
 
 /**

@@ -3,6 +3,8 @@
 
 TIM_HandleTypeDef TIM2_Handler;
 TIM_HandleTypeDef TIM3_Handler;
+TIM_HandleTypeDef TIM4_Handler;
+
 TIM_OC_InitTypeDef TIM3_CH12Handler;
 
 void TIM_Init(uint8_t TIMx,uint16_t detim){
@@ -33,7 +35,7 @@ void TIM_Init(uint8_t TIMx,uint16_t detim){
 		
 		HAL_TIM_Base_Start_IT(&TIM2_Handler);
 		
-		HAL_TIM_Base_Start(&TIM2_Handler);
+//		HAL_TIM_Base_Start(&TIM2_Handler);
 	 
     break;
 		
@@ -50,15 +52,44 @@ void TIM_Init(uint8_t TIMx,uint16_t detim){
 
 		TIM3_Handler.Init.ClockDivision=TIM_CLOCKDIVISION_DIV1; //时钟分频因子
 		
-	  if(HAL_TIM_Base_Init(&TIM2_Handler)!=HAL_OK){
+	  if(HAL_TIM_Base_Init(&TIM3_Handler)!=HAL_OK){
 		
 		     Error_Handler();
 		
 		}
 		
-		HAL_TIM_Base_Start_IT(&TIM2_Handler);
+		HAL_TIM_Base_Start_IT(&TIM3_Handler);
 		
-		HAL_TIM_Base_Start(&TIM2_Handler);
+		HAL_TIM_Base_Start(&TIM3_Handler);
+	 
+   
+
+    break;
+		
+		
+		
+		case 4:
+		
+    TIM4_Handler.Instance=TIM4;
+	 
+		TIM4_Handler.Init.Prescaler=39999; //分频系数
+
+		TIM4_Handler.Init.CounterMode=TIM_COUNTERMODE_UP; //向上计数器
+
+		TIM4_Handler.Init.Period=(detim*200)-1; //自动装载值
+
+		TIM4_Handler.Init.ClockDivision=TIM_CLOCKDIVISION_DIV1; //时钟分频因子
+		
+	  if(HAL_TIM_Base_Init(&TIM4_Handler)!=HAL_OK){
+		
+		     Error_Handler();
+		
+		}
+		
+		HAL_TIM_Base_Start_IT(&TIM4_Handler);
+		__HAL_TIM_DISABLE(&TIM4_Handler);
+		
+//		HAL_TIM_Base_Start(&TIM4_Handler);
 	 
    
 
@@ -90,6 +121,25 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim){
 		 }
 	
 	
+		 
+		 if(htim->Instance==TIM4){
+		 
+			 __HAL_RCC_TIM4_CLK_ENABLE();
+			 
+			
+			 HAL_NVIC_SetPriority(TIM4_IRQn,0,4);    //设置中断优先级，抢占优先级 1，子优先级 3
+
+       HAL_NVIC_EnableIRQ(TIM4_IRQn); //开启 ITM3 中断
+			 
+//		   HAL_TIM_Base_Start_IT(&TIM2_Handler); 
+//		
+//	    HAL_TIM_Base_Start(&TIM2_Handler);
+		 
+			 
+		 }
+		 
+		 
+		 
 }
 
 
@@ -97,12 +147,15 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim){
 
 
 
-void TIM_PWM_Init(){
+void TIM_PWM_Init(uint8_t TIMx,uint8_t channelx){
 
 /*************************定时器TIM2配置******************/
 	
- 
+  switch(TIMx){
 	
+		case 3:
+		{
+		
 		TIM3_Handler.Instance=TIM3; //通用定时器 3
 
 		TIM3_Handler.Init.Prescaler= 1999; //分频系数
@@ -115,16 +168,20 @@ void TIM_PWM_Init(){
 
 		HAL_TIM_PWM_Init(&TIM3_Handler);   // 写入寄存器
 
-	  
- 
+	  break;
+		}
+		
+		
+	}
 	
 /***********************PWM配置****************/
    
 	   
-		  
+		  switch(channelx){
 		 
 	 //定时器 1 通道 1 句柄 
-
+		case 1:
+	{
 		TIM3_CH12Handler.OCMode=TIM_OCMODE_PWM1; //模式选择 PWM1
 
 		TIM3_CH12Handler.Pulse=0.0/20.0*80; //设置比较值,此值用来确定占空比,默认比较值为自动重装载值的一半,即占空比为 50%
@@ -133,15 +190,42 @@ void TIM_PWM_Init(){
 
     TIM3_CH12Handler.OCFastMode=TIM_OCFAST_DISABLE;
 
-		HAL_TIM_PWM_ConfigChannel(&TIM3_Handler,&TIM3_CH12Handler,TIM_CHANNEL_1|TIM_CHANNEL_2);//配置 TIM1 通道 1
+		HAL_TIM_PWM_ConfigChannel(&TIM3_Handler,&TIM3_CH12Handler,TIM_CHANNEL_1);//配置 TIM1 通道 1
 
-   
-    HAL_TIM_PWM_Start(&TIM3_Handler,TIM_CHANNEL_1|TIM_CHANNEL_2);   // 使能 TIMx
+    HAL_TIM_PWM_Start(&TIM3_Handler,TIM_CHANNEL_1);   // 使能 TIMx
  
-//   TIM_CCxChannelCmd(TIM3,TIM_CHANNEL_1,1); // 单独使能定时器的输出通道函数
+   TIM_CCxChannelCmd(TIM3,TIM_CHANNEL_1,0); // 单独使能定时器的输出通道函数
+   __HAL_TIM_DISABLE(&TIM3_Handler);
 
   
+	  
+	  break; 
+	}
 
+	 case 2:
+	{
+		TIM3_CH12Handler.OCMode=TIM_OCMODE_PWM1; //模式选择 PWM1
+
+		TIM3_CH12Handler.Pulse=0.0/20.0*80; //设置比较值,此值用来确定占空比,默认比较值为自动重装载值的一半,即占空比为 50%
+
+		TIM3_CH12Handler.OCPolarity=TIM_OCPOLARITY_HIGH; //输出比较极性为低
+
+    TIM3_CH12Handler.OCFastMode=TIM_OCFAST_DISABLE;
+
+		HAL_TIM_PWM_ConfigChannel(&TIM3_Handler,&TIM3_CH12Handler,TIM_CHANNEL_2);//配置 TIM1 通道 1
+
+    HAL_TIM_PWM_Start(&TIM3_Handler,TIM_CHANNEL_2);   // 使能 TIMx
+ 
+   TIM_CCxChannelCmd(TIM3,TIM_CHANNEL_2,0); // 单独使能定时器的输出通道函数
+ 
+  
+	  
+	  break; 
+	}
+
+	
+	
+   }
 
 }
 
@@ -215,6 +299,25 @@ void TIM2_IRQHandler(void)//服务函数
 }
 
 
+void TIM4_IRQHandler(void)//服务函数
+{
+ 
+   HAL_TIM_IRQHandler(&TIM4_Handler);  // 中断服务函数中调用中断共用处理函数
+ 
+//	if(__HAL_TIM_GET_FLAG(&TIM2_Handler,TIM_FLAG_UPDATE)!=RESET){
+//	
+//		   MQTT_Mes(PING,2);
+//		
+//		__HAL_TIM_CLEAR_FLAG(&TIM2_Handler,TIM_FLAG_UPDATE);
+//		 
+//	
+//	}
+	
+	
+	
+}
+
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 
@@ -230,6 +333,17 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		 
 		 }
 
+		 
+		 if(htim->Instance==TIM4){
+		 
+			  IsDetect=1;
+			 
+			  __HAL_TIM_DISABLE(&TIM4_Handler);
+
+		 
+			 __HAL_TIM_CLEAR_FLAG(&TIM4_Handler,TIM_FLAG_UPDATE);
+		 
+		 }
 
 
 
