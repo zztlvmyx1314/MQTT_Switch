@@ -99,14 +99,14 @@ int main(void)
     printf("*************Ready!*************\n");
 
 
-	   Motor_SetAngle(Motor_2,0);
-		 Motor_SetAngle(Motor_1,0);
-	  
-		  
-		 HAL_Delay(500);
-		 
-		 Motor_SetAngle(Motor_2,180);
-		 Motor_SetAngle(Motor_1,180);
+//	   Motor_SetAngle(Motor_2,0);
+//		 Motor_SetAngle(Motor_1,0);
+//	  
+//		  
+//		 HAL_Delay(500);
+//		 
+//		 Motor_SetAngle(Motor_2,180);
+//		 Motor_SetAngle(Motor_1,180);
 
 	
 	
@@ -143,29 +143,29 @@ int main(void)
 		
 		  case 0x11:
 				flag=0;
-			 Motor_Rotate(Motor_1,0);
-			 Motor_Rotate(Motor_1,90);
+			 Motor_Rotate(Motor_1,20);
+			 Motor_Rotate(Motor_1,45);
 			 
 			break;
 		
 		case 0x10:
 				flag=0;
-			 Motor_Rotate(Motor_1,180);
-			 Motor_Rotate(Motor_1,90);
+			 Motor_Rotate(Motor_1,70);
+			 Motor_Rotate(Motor_1,45);
 			 
 			break;
 		
 		case 0x21:
 				flag=0;
-			 Motor_Rotate(Motor_2,180);
-			 Motor_Rotate(Motor_2,90);
+			 Motor_Rotate(Motor_2,20);
+			 Motor_Rotate(Motor_2,45);
 			 
 			break;
 		
 		case 0x20:
 				flag=0;
-			 Motor_Rotate(Motor_2,0);
-			 Motor_Rotate(Motor_2,90);
+			 Motor_Rotate(Motor_2,70);
+			 Motor_Rotate(Motor_2,45);
 			 
 			break;
 		

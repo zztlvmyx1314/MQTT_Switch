@@ -1,10 +1,10 @@
 Dependencies for Project 'MQTT_Switch', Target 'MQTT_Switch': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
-F (startup_stm32f103xb.s)(0x604723F3)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o mqtt_switch\startup_stm32f103xb.o --depend mqtt_switch\startup_stm32f103xb.d)
-F (../Core/Src/main.c)(0x604C1654)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\main.o --omf_browse mqtt_switch\main.crf --depend mqtt_switch\main.d)
-I (../Core/Inc/main.h)(0x604723F0)
+F (startup_stm32f103xb.s)(0x607A3763)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o mqtt_switch\startup_stm32f103xb.o --depend mqtt_switch\startup_stm32f103xb.d)
+F (../Core/Src/main.c)(0x607A3815)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\main.o --omf_browse mqtt_switch\main.crf --depend mqtt_switch\main.d)
+I (../Core/Inc/main.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -35,12 +35,12 @@ I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (..\MDK-ARM\tim.h)(0x604B507F)
 I (..\MDK-ARM\mqtt.h)(0x604B5472)
-I (..\MDK-ARM\motor.h)(0x604B7F78)
+I (..\MDK-ARM\motor.h)(0x607A3763)
 I (..\MDK-ARM\esp8266.h)(0x604A0891)
-F (../Core/Src/stm32f1xx_it.c)(0x604723F0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_it.o --omf_browse mqtt_switch\stm32f1xx_it.crf --depend mqtt_switch\stm32f1xx_it.d)
-I (../Core/Inc/main.h)(0x604723F0)
+F (../Core/Src/stm32f1xx_it.c)(0x607A3762)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_it.o --omf_browse mqtt_switch\stm32f1xx_it.crf --depend mqtt_switch\stm32f1xx_it.d)
+I (../Core/Inc/main.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -66,11 +66,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_it.h)(0x604723F0)
-F (../Core/Src/stm32f1xx_hal_msp.c)(0x60472878)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_msp.o --omf_browse mqtt_switch\stm32f1xx_hal_msp.crf --depend mqtt_switch\stm32f1xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x604723F0)
+I (../Core/Inc/stm32f1xx_it.h)(0x607A3762)
+F (../Core/Src/stm32f1xx_hal_msp.c)(0x607A3762)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_msp.o --omf_browse mqtt_switch\stm32f1xx_hal_msp.crf --depend mqtt_switch\stm32f1xx_hal_msp.d)
+I (../Core/Inc/main.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -96,11 +96,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
-F (.\usart.c)(0x604C13A1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\usart.o --omf_browse mqtt_switch\usart.crf --depend mqtt_switch\usart.d)
+F (.\usart.c)(0x607A3763)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\usart.o --omf_browse mqtt_switch\usart.crf --depend mqtt_switch\usart.d)
 I (usart.h)(0x604B62F8)
-I (../Core/Inc/main.h)(0x604723F0)
+I (../Core/Inc/main.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -129,15 +129,15 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (mqtt.h)(0x604B5472)
-I (motor.h)(0x604B7F78)
+I (motor.h)(0x607A3763)
 I (tim.h)(0x604B507F)
 I (esp8266.h)(0x604A0891)
 F (.\usart.h)(0x604B62F8)()
-F (.\esp8266.c)(0x604A29F1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\esp8266.o --omf_browse mqtt_switch\esp8266.crf --depend mqtt_switch\esp8266.d)
+F (.\esp8266.c)(0x607A3763)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\esp8266.o --omf_browse mqtt_switch\esp8266.crf --depend mqtt_switch\esp8266.d)
 I (esp8266.h)(0x604A0891)
-I (../Core/Inc/main.h)(0x604723F0)
+I (../Core/Inc/main.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -167,14 +167,14 @@ I (mqtt.h)(0x604B5472)
 I (usart.h)(0x604B62F8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
-I (motor.h)(0x604B7F78)
+I (motor.h)(0x607A3763)
 I (tim.h)(0x604B507F)
 F (.\esp8266.h)(0x604A0891)()
-F (.\motor.c)(0x604C2E2F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\motor.o --omf_browse mqtt_switch\motor.crf --depend mqtt_switch\motor.d)
-I (motor.h)(0x604B7F78)
-I (../Core/Inc/main.h)(0x604723F0)
+F (.\motor.c)(0x607A3763)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\motor.o --omf_browse mqtt_switch\motor.crf --depend mqtt_switch\motor.d)
+I (motor.h)(0x607A3763)
+I (../Core/Inc/main.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -206,13 +206,13 @@ I (usart.h)(0x604B62F8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (esp8266.h)(0x604A0891)
-F (.\motor.h)(0x604B7F78)()
+F (.\motor.h)(0x607A3763)()
 F (.\mqtt.h)(0x604B5472)()
-F (.\mqtt.c)(0x604C1575)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\mqtt.o --omf_browse mqtt_switch\mqtt.crf --depend mqtt_switch\mqtt.d)
+F (.\mqtt.c)(0x607A37DD)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\mqtt.o --omf_browse mqtt_switch\mqtt.crf --depend mqtt_switch\mqtt.d)
 I (mqtt.h)(0x604B5472)
-I (../Core/Inc/main.h)(0x604723F0)
+I (../Core/Inc/main.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -241,14 +241,14 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 I (usart.h)(0x604B62F8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
-I (motor.h)(0x604B7F78)
+I (motor.h)(0x607A3763)
 I (tim.h)(0x604B507F)
 I (esp8266.h)(0x604A0891)
-F (.\tim.c)(0x604C16B0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\tim.o --omf_browse mqtt_switch\tim.crf --depend mqtt_switch\tim.d)
+F (.\tim.c)(0x607A3763)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\tim.o --omf_browse mqtt_switch\tim.crf --depend mqtt_switch\tim.d)
 I (tim.h)(0x604B507F)
-I (../Core/Inc/main.h)(0x604723F0)
+I (../Core/Inc/main.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -278,12 +278,12 @@ I (mqtt.h)(0x604B5472)
 I (usart.h)(0x604B62F8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
-I (motor.h)(0x604B7F78)
+I (motor.h)(0x607A3763)
 I (esp8266.h)(0x604A0891)
 F (.\tim.h)(0x604B507F)()
 F (..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_uart.o --omf_browse mqtt_switch\stm32f1xx_hal_uart.crf --depend mqtt_switch\stm32f1xx_hal_uart.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -311,7 +311,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_gpio_ex.o --omf_browse mqtt_switch\stm32f1xx_hal_gpio_ex.crf --depend mqtt_switch\stm32f1xx_hal_gpio_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -339,7 +339,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_tim.o --omf_browse mqtt_switch\stm32f1xx_hal_tim.crf --depend mqtt_switch\stm32f1xx_hal_tim.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -367,7 +367,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_tim_ex.o --omf_browse mqtt_switch\stm32f1xx_hal_tim_ex.crf --depend mqtt_switch\stm32f1xx_hal_tim_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -395,7 +395,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal.o --omf_browse mqtt_switch\stm32f1xx_hal.crf --depend mqtt_switch\stm32f1xx_hal.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -423,7 +423,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_rcc.o --omf_browse mqtt_switch\stm32f1xx_hal_rcc.crf --depend mqtt_switch\stm32f1xx_hal_rcc.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -451,7 +451,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_rcc_ex.o --omf_browse mqtt_switch\stm32f1xx_hal_rcc_ex.crf --depend mqtt_switch\stm32f1xx_hal_rcc_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -479,7 +479,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_gpio.o --omf_browse mqtt_switch\stm32f1xx_hal_gpio.crf --depend mqtt_switch\stm32f1xx_hal_gpio.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -507,7 +507,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_dma.o --omf_browse mqtt_switch\stm32f1xx_hal_dma.crf --depend mqtt_switch\stm32f1xx_hal_dma.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -535,7 +535,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_cortex.o --omf_browse mqtt_switch\stm32f1xx_hal_cortex.crf --depend mqtt_switch\stm32f1xx_hal_cortex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -563,7 +563,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_pwr.o --omf_browse mqtt_switch\stm32f1xx_hal_pwr.crf --depend mqtt_switch\stm32f1xx_hal_pwr.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -591,7 +591,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_flash.o --omf_browse mqtt_switch\stm32f1xx_hal_flash.crf --depend mqtt_switch\stm32f1xx_hal_flash.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -619,7 +619,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_flash_ex.o --omf_browse mqtt_switch\stm32f1xx_hal_flash_ex.crf --depend mqtt_switch\stm32f1xx_hal_flash_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -647,7 +647,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC1ADC2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c)(0x5FC1ADC3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\MDK-ARM -I .\MQTT_Switch-I.\RTE\_MQTT_Switch-ID:\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o mqtt_switch\stm32f1xx_hal_exti.o --omf_browse mqtt_switch\stm32f1xx_hal_exti.crf --depend mqtt_switch\stm32f1xx_hal_exti.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC1ADC2)
@@ -683,7 +683,7 @@ I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FC1ADAE)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FC1ADAE)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC1ADC2)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x60472438)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x607A3762)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC1ADC2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5FC1ADC2)
